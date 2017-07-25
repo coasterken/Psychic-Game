@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Psychic Game</title>
+
+  <!-- Bootstrap and project css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- Link javascript -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</head>
+
+
+<body onload="loadFunction()">
+
+  <div>
+    <h1>The Psychic Game</h1>
+  
+    <h3>
+     Guess the letter I am thinking of
+    </h3>
+    <br>
+  </div>
+  <div>
+    <h4>
+      Instructions:
+    </h4>
+    <h4>
+      Enter a letter to start
+    </h4>
+    <h4>
+      You get 10 guesses per game
+    </h4>
+  </div>
+  <br>
+  
+  <p>Wins: <span id="wins"></span></p>
+
+  <p>Losses: <span id="losses"></span> </p>
+
+  <p>Guesses Left: <span id="guessesLeft"></span> </p>
+
+  <p>Your guesses so far: <input id="yourGuesses" type="text" onkeyup="checkInput()"> </p>
+
+  <p class="text-primary">
+    <strong><span id="status"></span></strong>
+  </p>
+
+</body>
+</html>
