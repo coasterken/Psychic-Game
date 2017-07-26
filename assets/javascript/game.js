@@ -26,12 +26,14 @@ function checkInput() {
 
   if (guesses.match(/^[a-zA-Z]+$/)) {
     // alphabet letters found
+    // Could use this option 
+    // var n = str.indexOf("welcome");
     console.log("u good-" + guesses[(guesses.length)-1]); 
     guessesRemaining = guessesRemaining - 1;
     document.getElementById("guessesLeft").innerHTML = guessesRemaining; 
 
     //compare to random character
-    if ((guesses[(guesses.length)-1]) === randomLetter) {
+    if ((guesses[(guesses.length)-1]).toLowerCase() === randomLetter) {
       document.getElementById("status").innerHTML 
       = "Your psychic mind is working!  You Win! Try Again"; 
       totalWins = totalWins + 1;
