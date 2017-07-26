@@ -24,6 +24,12 @@ function checkInput() {
   var guesses = document.getElementById("yourGuesses").value;
   document.getElementById("guessesLeft").innerHTML = guessesRemaining; 
 
+  //   /^[a-zA-Z]+$/ means match all strings that start with a letter
+  //   /[^a-zA-Z]+$/ matches a string that STARTS with one-or more upper- 
+  //   or lower-case letters and also ends with it. Meaning, the only thing 
+  //   in your string is upper- or lower-case letters.
+  //   ^ is begin of string, $ is end of string. It's used here to make 
+  //   sure the complete string does contain characters. 
   if (guesses.match(/^[a-zA-Z]+$/)) {
     // alphabet letters found
     // Could use this option 
